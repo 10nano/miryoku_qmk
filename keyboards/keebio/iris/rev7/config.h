@@ -17,6 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+// Squeezing the most out of AVR
+#define NO_MUSIC_MODE
+#define LAYER_STATE_16BIT
+
+
 // wiring of each half
 #define MATRIX_ROW_PINS { B1, F0, F5, B4, D7 }
 #define MATRIX_COL_PINS { F1, F4, B5, C7, D4, D6 }
