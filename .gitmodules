@@ -25,6 +25,3 @@
 	path = lib/lvgl
 	url = https://github.com/10nano/lvgl.git
 	branch = release/v8.2
-[submodule "miryoku_babel"]
-	path = miryoku_babel
-	url = https://github.com/10nano/babel.git
