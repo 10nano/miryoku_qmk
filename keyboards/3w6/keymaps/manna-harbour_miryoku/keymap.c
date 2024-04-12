@@ -15,3 +15,28 @@
  */
 
 // generated from users/manna-harbour_miryoku/miryoku.org  -*- buffer-read-only: t -*-
+
+#include QMK_KEYBOARD_H
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTL_T(KC_I):
+            if (record->tap.count && record->event.pressed) {
+		if (get_mods() & MOD_BIT(KC_ALGR)) {
+                  tap_code16(KC_L);    // Send ALGR(KC_L) on tap because ALGR is hold
+                  return false;        // Return false to ignore further processing of key
+	        }
+            }
+            break;
+        case LALT_T(KC_T):
+            if (record->tap.count && record->event.pressed) {
+		if (get_mods() & MOD_BIT(KC_ALGR)) {
+                  tap_code16(KC_X);    // Send ALGR(KC_X) on tap because ALGR is hold
+                  return false;        // Return false to ignore further processing of key
+	        }
+            }
+            break;
+    }
+    return true;   // Return true for normal processing of tap keycode
+}
+
